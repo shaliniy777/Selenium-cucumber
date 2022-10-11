@@ -1,0 +1,479 @@
+Date: Tue, 11 Oct 2022 09:25:39 +0000 (UTC)
+Message-ID: <127653752.36332.1665480339145@usaea1papuesc03.us.experian.eeca>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_36331_1237054408.1665480339145"
+
+------=_Part_36331_1237054408.1665480339145
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>How to run Automation tests in IntelliJ using Test BDD framework=
+?</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>How to run Automation tests in IntelliJ using Test BDD framework?</=
+h1>
+    <div class=3D"Section1">
+        <h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-/=
+*<![CDATA[*/div.rbtoc1665480339132{padding:0px;}div.rbtoc1665480339132ul{ma=
+rgin-left:0px;}div.rbtoc1665480339132li{margin-left:0px;padding-left:0px;}/=
+*]]>*/#HowtorunAutomationtestsinIntelliJusingTes"><style type=3D"text/css">=
+/*<![CDATA[*/
+div.rbtoc1665480339132 {padding: 0px;}
+div.rbtoc1665480339132 ul {margin-left: 0px;}
+div.rbtoc1665480339132 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style>
+<div class=3D"toc-macro rbtoc1665480339132">=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-"><=
+/a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Int=
+roduction">Introduction</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Set=
+uptheBDDframework">Set up the BDD framework</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Con=
+figureenvironment">Configure environment</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Upd=
+ate.gitmodulesfile(s)ifneeded">Update .gitmodules file(s) if needed</a></li=
+>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Upd=
+ateconfig.propertiesfile">Update config.properties file</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Run=
+tests">Run tests</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Imp=
+ediments">Impediments</a></li>=20
+<li><a href=3D"#HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Ref=
+erences">References</a></li>=20
+</ul>=20
+</div></h1>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Introduct=
+ion">Introduction</h1>
+<p>The purpose of this page is to show how to set up and run System and Ser=
+vice Integration tests from the local machine.</p>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-SetuptheB=
+DDframework">Set up the BDD framework</h1>
+<ol>
+<li>&nbsp; The first thing is to set up the common BDD framework.<br><br>
+<ul>
+<li>The repository is places here:&nbsp;<a href=3D"https://code.experian.lo=
+cal/projects/DASA/repos/test-bdd-framework/browse" class=3D"external-link" =
+rel=3D"nofollow">https://code.experian.local/projects/DASA/repos/test-bdd-f=
+ramework/browse</a></li>
+<li>If you have no rights for it, you should request them. You san see how =
+from <a href=3D"/display/GPD/On-Boarding+in+Experian+One+Starters+Introduct=
+ion#OnBoardinginExperianOneStartersIntroduction-Git&amp;SourceTree">On-Boar=
+ding in Experian One Starters Introduction#Git&amp;SourceTree</a></li>
+<li>Links for setup of the BDD framework:
+<ul>
+<li><a href=3D"/display/GSPD/SaaS+Test+Framework+Setup+Guide#SaaSTestFramew=
+orkSetupGuide-Environment+Setup">SaaS Test Framework Setup Guide#Environmen=
+t+Setup</a></li>
+<li><a href=3D"/display/DGQ/Cucumber+Common+Framework#CucumberCommonFramewo=
+rk-GitCloneCucumberproject">Cucumber Common Framework#GitCloneCucumberproje=
+ct</a><br><br></li>
+</ul></li>
+</ul></li>
+<li>&nbsp;You will also need the chromedriver.</li>
+</ol>
+<ol>
+<li style=3D"list-style-type: none;background-image: none;">
+<ul>
+<li>Download the chromedrive on you computer</li>
+<li>Place the chromedriver.exe inside into the test-bdd-framework folder.</=
+li>
+</ul></li>
+</ol>
+<p><br></p>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Configure=
+environment">Configure environment</h1>
+<p>You need to create environment in Openshift against which you want to ru=
+n the automation tests.</p>
+<div class=3D"confluence-information-macro confluence-information-macro-not=
+e">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-warning confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>It is very important to create your environment with name&nbsp;<strong>S=
+andbox</strong>&nbsp;when running <strong>User Journey automation tests (Sy=
+stem tests written by Caishen).</strong><br>The variable<span style=3D"colo=
+r: rgb(255,198,109);">&nbsp;<span style=3D"color: rgb(0,0,0);">"</span></sp=
+an>environmentLabel" should be the name of your environment (Use case). Not=
+ice that the variable<span style=3D"color: rgb(255,198,109);">&nbsp;<span s=
+tyle=3D"color: rgb(0,0,0);">"</span></span>environmentLabel" assigns it's v=
+aue from the first created environment in your client.&nbsp;Hardcode the na=
+me of your environment in the AdministrationSteps.java class - "selectUseCa=
+seEnvironment" method to ensure the tests will be triggered against the cor=
+rect environment.&nbsp;</p>
+<p><strong>***</strong></p>
+<p>If you are trying to execute <strong>Service Integration test</strong> c=
+urrently you can point which environment you want to use in one of the step=
+s the following way (last parameter is the name of the environment):<br><br=
+></p>
+<pre><span style=3D"color: rgb(204,120,50);">And </span>I select Package Co=
+nfiguration - <span style=3D"color: rgb(41,123,222);">Roguetestusecase/Batc=
+h File Processing/Automation</span></pre>
+</div>
+</div>
+<p><br><br>The environment <strong>should be connected with mock STS.</stro=
+ng>&nbsp;This is applicable both for System (User Journey) and Service Inte=
+gration tests. How to do this, you can see from&nbsp;<a href=3D"/pages/view=
+page.action?pageId=3D615098812">How to configure the common mock STS?</a>&n=
+bsp;or&nbsp;<a href=3D"https://pages.experian.com/display/GPD/Configure+Cit=
+rus+STS+Mock+and+HaProxy+on+new+or+existing+OpenShift+Environment" rel=3D"n=
+ofollow">Configure Citrus STS Mock and HaProxy on new or existing OpenShift=
+ Environment</a></p>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Update.gi=
+tmodulesfile(s)ifneeded">Update .gitmodules file(s) if needed</h1>
+<p>Since the test-bdd framework has 3 levels, it contains 2 .gitmodules fil=
+es that needs to be updated only if there are changes in the relevant level=
+s (repos)</p>
+<ul style=3D"list-style-type: square;">
+<li>If you have changes in <span style=3D"color: rgb(29,28,29);">cucumber-c=
+ommon-e1 repo, you need to change .gitmodules file, located in test-bdd fra=
+mework by updating <strong>"</strong></span><strong><span style=3D"color: r=
+gb(204,120,50);">branch </span>=3D master" </strong>property to point to yo=
+ur relevant branch in cucumber-common-e1</li>
+<li>Same thing should be relevantly applied for .gitmodules file under cucu=
+mber-common-e1 structure if you have changes in <span style=3D"color: rgb(2=
+9,28,29);">cucumber-common (</span><span style=3D"color: rgb(29,28,29);">by=
+ updating <strong>"</strong></span><strong><span style=3D"color: rgb(204,12=
+0,50);">branch </span>=3D master" </strong>property to point to your releva=
+nt branch in cucumber-common<span style=3D"color: rgb(29,28,29);">)</span><=
+/li>
+</ul>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Updatecon=
+fig.propertiesfile">Update config.properties file</h1>
+<p>You need to update the local config.properties file to reflect the corre=
+ct properties of the environment you want to use.</p>
+<p>Below are reflected the needed properties and how they needs to be set i=
+n order to run Data Export's tests. For other services they should be simil=
+ar (more can be needed).</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: yml; gutter: false; theme: Confluence" data-theme=3D"Confluence"># The fo=
+lder in STS where files are stored. If using common STS  16175d5e744f48f9a5=
+0f917e972afd is your client id - example below
+temp.dir =3D /opt/citrus-ftp-server-simulator/sts/admin/16175d5e744f48f9a50=
+f917e972afd
+
+
+# Folder where is placed the chromedriver.exe - example below
+webdriver.dir =3D C:/Users/{LANID}/Documents/EORepos/test-bdd-framework
+
+
+# The url of the bps, taken from your environment in Openshift/HB - example=
+ below
+bps.url =3D https://bps.da-saas-non-prod-35bad18db96f442bb57637ea8105cfe9.a=
+pps.appcanvas.net
+
+
+# The url of the bps facade, taken from your environment in Openshift/HB. P=
+lease note you need to keep /services. - example below
+bps.facade.webservices.url =3D https://bps-facade.da-saas-non-prod-35bad18d=
+b96f442bb57637ea8105cfe9.apps.appcanvas.net/services
+
+
+# Id of your client, can be taken from dev portal - example below
+cms.client.id =3D 16175d5e744f48f9a50f917e972afd
+
+
+# The domain of your client (can be taken from dev portal) - example below
+cms.client.email.domain =3D wolverineteamclient.com
+
+# Url to the mocked STS in Openshift/HB - the example below is for the Comm=
+on Mock STS
+citrus.simulator.url=3Dhttps://da-saas-nntssp6ltrch.apps.appcanvas.net
+
+
+# Logging credentials. The password is a dummy one. You need to add only th=
+e user. In the example below this is "mock-bob"
+tactical.parameters.api.user=3Dmock-bob@${cms.client.email.domain}
+tactical.parameters.api.password=3DPassword123
+</pre>=20
+</div>
+</div>
+<p><br></p>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Runtests"=
+>Run tests</h1>
+<ol>
+<li>In order to run an automation test you need to reference it from config=
+.properties file.<br><p>This is done in the beginning of the config.propert=
+ies file:&nbsp;</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence"># Execu=
+tion tags (e.g. not @skip, @test-id-12345)
+execution.tags=3Dnot @skip, not @skip-on-${browser}, @test-id-32410507</pre=
+>=20
+</div>
+</div><p>In this example we are running automation test with id&nbsp;&nbsp;=
+<span style=3D"color: rgb(106,135,89);"><span style=3D"color: rgb(0,0,0);">=
+<strong>32410507</strong></span><span style=3D"color: rgb(0,0,0);">. The id=
+ of the test can be taken from the comment above the test in the automation=
+ project.<br><br>Tests could be also run by Component tag, for example if t=
+ests are marked with&nbsp;<br></span></span></p><pre><span style=3D"color: =
+rgb(98,151,85);"># Component: Batch File Processing Service</span></pre><p>=
+<span style=3D"color: rgb(106,135,89);"><span style=3D"color: rgb(0,0,0);">=
+then we run the tests as:</span></span></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence"># Execu=
+tion tags (e.g. not @skip, @test-id-12345)
+execution.tags=3Dnot @skip, not @skip-on-${browser}, @component-batch-file-=
+processing-service</pre>=20
+</div>
+</div></li>
+<li>&nbsp;Now once all is set, go to AutomationRunner class and run it.<br>=
+If everything is set correctly the test should run.</li>
+</ol>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Impedimen=
+ts">Impediments&nbsp;</h1>
+<p>Cucumber doesn't recognize steps:<br><br>- Make sure you are using last =
+version of IntelliJ<br>- Make sure you are using master branch for cucumber=
+-common-e1</p>
+<h1 id=3D"HowtorunAutomationtestsinIntelliJusingTestBDDframework?-Reference=
+s">References</h1>
+<ul>
+<li><a href=3D"/display/GSPD/SaaS+Test+Framework+Setup+Guide#SaaSTestFramew=
+orkSetupGuide-Environment+Setup">SaaS Test Framework Setup Guide#Environmen=
+t+Setup</a></li>
+<li><a href=3D"/display/DGQ/Cucumber+Common+Framework#CucumberCommonFramewo=
+rk-GitCloneCucumberproject">Cucumber Common Framework#GitCloneCucumberproje=
+ct</a></li>
+<li><a href=3D"/display/GPD/On-Boarding+in+Experian+One+Starters+Introducti=
+on">On-Boarding in Experian One Starters Introduction</a></li>
+<li><a href=3D"/display/GPD/How+to+Make+Screenless+New+Application+Call+for=
++User+Journey+on+Openshift">How to Make Screenless New Application Call for=
+ User Journey on Openshift</a></li>
+<li><a href=3D"/display/GPD/Mock-OKTA+refactoring+and+regrouping">Mock-OKTA=
+ refactoring and regrouping</a></li>
+</ul>
+<p><br></p>
+    </div>
+</body>
+</html>
+------=_Part_36331_1237054408.1665480339145--
