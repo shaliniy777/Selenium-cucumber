@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--<localRepository>${MAVEN_REPOSITORY_HOME}</localRepository>  -->
+  <mirrors>
+    <mirror>
+      <id>artifactory</id>
+      <name>Artifactory</name>
+      <url>http://artifactory-mars.cd.genesaas.io/artifactory/saas2</url>
+      <mirrorOf>external:*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>public</id>
+          <name>Public Repositories</name>
+          <url>http://artifactory-mars.cd.genesaas.io/artifactory/saas2</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </snapshots>
+          <layout>default</layout>
+        </repository>
+      </repositories>
+	    <pluginRepositories>
+        <pluginRepository>
+          <id>public</id>
+          <name>Public Repositories</name>
+          <url>http://artifactory-mars.cd.genesaas.io/artifactory/saas2</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+          <layout>default</layout>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>
